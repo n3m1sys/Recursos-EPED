@@ -14,20 +14,20 @@ public interface CollectionIF<E> {
 	
 	/**
 	 * Devuelve el número de elementos en la colección
-	 * @return
+	 * @return número de elementos en la colección
 	 */
 	public int size();
 	
 	/**
 	 * Devuelve true si la colección no contiene elementos
-	 * @return
+	 * @return true si la colección está vacía
 	 */
 	public boolean isEmpty();
 	
 	/**
 	 * Devuelve true si e está en la colección
 	 * @param e
-	 * @return
+	 * @return true si está en la colección
 	 */
 	public boolean contains(E e);
 	
