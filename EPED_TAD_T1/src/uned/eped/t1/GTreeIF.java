@@ -8,7 +8,7 @@ package uned.eped.t1;
  * Representa un árbol general de elementos, en el que un
  * nodo puede tener cualquier número de hijos
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene el árbol
  */
 public interface GTreeIF<E> extends TreeIF<E> {
 
@@ -39,7 +39,7 @@ public interface GTreeIF<E> extends TreeIF<E> {
 	 * Obtiee el hijo que ocupa la posición dada por el parámetro
 	 * @param pos la posiciópn del hijo que se desea obtener,
 	 * 	comenzando por el 1.
-	 * @Pre 1 <= pos <= getChildren().size();
+	 * @pre 1 &lt;= pos &lt;= getChildren().size();
 	 * @return el árbol hijo que ocupa la posición pos.
 	 */
 	public GTreeIF<E> getChild(int pos);
@@ -50,14 +50,14 @@ public interface GTreeIF<E> extends TreeIF<E> {
 	 * 	comenzando en 1.
 	 * Si pos == getChildren().size() + 1, se añade como último hijo.
 	 * @param e el hijo ue se desea insertar.
-	 * @Pre 1 <= pos <= getChildre().size() + 1
+	 * @pre 1 &lt;= pos &lt;= getChildre().size() + 1
 	 */
 	public void addChild(int pos, GTreeIF<E> e);
 	
 	/**
 	 * Elimina el hijo que ocupa la posición parámetro.
 	 * @param pos la posición del hijo con base 1.
-	 * @Pre 1 <= pos <= getChildren().size()
+	 * @pre 1 &lt;= pos &lt;= getChildren().size()
 	 */
 	public void removeChild(int pos);
 	

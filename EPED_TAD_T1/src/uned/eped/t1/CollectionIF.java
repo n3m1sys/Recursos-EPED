@@ -8,7 +8,7 @@ package uned.eped.t1;
  * de relación entre ellos más que la pertenencia a la misma
  * colección
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene la colección
  */
 public interface CollectionIF<E> {
 	
@@ -26,7 +26,7 @@ public interface CollectionIF<E> {
 	
 	/**
 	 * Devuelve true si e está en la colección
-	 * @param e
+	 * @param e elemento a comprobar
 	 * @return true si está en la colección
 	 */
 	public boolean contains(E e);

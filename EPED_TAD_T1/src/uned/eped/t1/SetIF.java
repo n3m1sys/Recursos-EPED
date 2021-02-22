@@ -7,7 +7,7 @@ package uned.eped.t1;
  * Representa un conjunto, que es un contenedor que permite
  * alamacenar elementos que serán únicos dentro del conjunto
  * 
- * @param <E>
+ * @param <E> Tipo de objetos que coniene el conjunto
  */
 public interface SetIF<E> extends ContainerIF<E> {
 	
@@ -26,7 +26,7 @@ public interface SetIF<E> extends ContainerIF<E> {
 	/**
 	 * Realiza la diferencia del conjunto llamante con el del parámetro
 	 * (los elementos que están en el llamante pero no en el parámetro)
-	 * @param s
+	 * @param s el otro conjunto
 	 */
 	public void difference(SetIF<E> s);
 	

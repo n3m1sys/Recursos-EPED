@@ -6,13 +6,13 @@ package uned.eped.t1;
  * 
  * Representa un iterador de elementos
  *
- * @param <E>
+ * @param <E> Tipo de objetos que itera el iterador
  */
 public interface IteratorIF<E> {
 	
 	/**
 	 * Obtiene el siguiente elemento de la iteración
-	 * @Pre hasNext()
+	 * @pre hasNext()
 	 * @return el siguiente elemento de la iteración
 	 */
 	public E getNext();
@@ -25,7 +25,7 @@ public interface IteratorIF<E> {
 	
 	/**
 	 * Vuelve la posición del iterador al principio. Esto
-	 * permiote reutiliza un iterador sin crear otro nuevo.
+	 * permite reutiliza un iterador sin crear otro nuevo.
 	 */
 	public void reset();
 

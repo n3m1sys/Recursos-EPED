@@ -8,7 +8,7 @@ package uned.eped.t1;
  * permite alamacenar elementos de los que puede haber
  * múltiples instancias dentro del multiconjunto.
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene el multiconjunto
  */
 public interface MultiSetIF<E> {
 
@@ -16,8 +16,8 @@ public interface MultiSetIF<E> {
 	 * Añade varias instancias de un elemento al multiconjunto
 	 * @param e instancia
 	 * @param n número de instancias
-	 * @pre: n>0 && premult = multiplicity(e)
-	 * @post: multiplicity(e) = premult + n
+	 * @pre n&gt;0 &amp;&amp; premult = multiplicity(e)
+	 * @post multiplicity(e) = premult + n
 	 */
 	public void addMultiple(E e, int n);
 	
@@ -25,8 +25,8 @@ public interface MultiSetIF<E> {
 	 * Elimina varias instancias de un elemento del multiconjunto
 	 * @param e instancia
 	 * @param n número de instancias
-	 * @pre: 0<n<=multiplicity(e) && premult=multiplicity(e)
-	 * @post: multiplicity(e) = premult - n
+	 * @pre 0&lt;n&lt;=multiplicity(e) &amp;&amp; premult=multiplicity(e)
+	 * @post multiplicity(e) = premult - n
 	 */
 	public void removeMultiple(E e, int n);
 	

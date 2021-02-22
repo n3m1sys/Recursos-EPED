@@ -5,10 +5,10 @@ package uned.eped.t1;
  * para las estrcuturas de datos de árboles binarios.
  * 
  * Representa un árbol binario de elementos, en el que un
- * nodo puede tener, a los usmo, dos hijos (fan-out <= 2
+ * nodo puede tener, a los usmo, dos hijos (fanout &lt;= 2
  * para todos los nodos).
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene el árbol
  */
 public interface BTreeIF<E> extends TreeIF<E>{
 
@@ -38,7 +38,7 @@ public interface BTreeIF<E> extends TreeIF<E>{
 	 * Pone el árbol parámetro com hijo izquierdo del árbol
 	 * llamante. Si ya había hijo izquierdo, el anitguo 
 	 * dejará de ser accesible (se pierde).
-	 * @Pre !isEmpty()
+	 * @pre !isEmpty()
 	 * @param child el árbol que se debe poner como hijo
 	 * 	izquiedo
 	 */
@@ -59,7 +59,7 @@ public interface BTreeIF<E> extends TreeIF<E>{
 	 * Pone el árbol parámetro com hijo derecho del árbol
 	 * llamante. Si ya había hijo derecho, el anitguo 
 	 * dejará de ser accesible (se pierde).
-	 * @Pre !isEmpty()
+	 * @pre !isEmpty()
 	 * @param child el árbol que se debe poner como hijo
 	 * 	derecho
 	 */

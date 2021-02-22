@@ -9,13 +9,13 @@ package uned.eped.t1;
  * de sus elementos y una política de acceso Last In First Out
  * (LIFO)
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene la pila
  */
 public interface Stack<E> extends SequenceIF<E>{
 	
 	/**
 	 * Devuelve el elemento situado en la cima de la pila
-	 * @Pre !isEmpty()
+	 * @pre !isEmpty()
 	 * @return la cima de la pila
 	 */
 	public E getTop();
@@ -30,7 +30,7 @@ public interface Stack<E> extends SequenceIF<E>{
 	/**
 	 * Elimina la cima de la pila. Modifica el tamaño de la 
 	 * pila.
-	 * @Pre !isEmpty()
+	 * @pre !isEmpty()
 	 */
 	public void pop();
 

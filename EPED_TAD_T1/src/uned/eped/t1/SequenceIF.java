@@ -7,7 +7,7 @@ package uned.eped.t1;
  * Representa una secuencia, que es una colección de elementos 
  * que se organizan linealmente
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene la secuencia
  */
 public interface SequenceIF<E> extends CollectionIF<E>{
 	

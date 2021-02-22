@@ -7,7 +7,7 @@ package uned.eped.t1;
  *
  * Representa un árbol de búsqueda binaria
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene el árbol
  */
 public interface BSTreeIF<E extends Comparable<E>> extends TreeIF<E>{
 
@@ -31,16 +31,16 @@ public interface BSTreeIF<E extends Comparable<E>> extends TreeIF<E>{
 	
 	/**
 	 * Añade un elemento no contenido previamente en el árbol
-	 * @Pre !contains(e)
-	 * @Post contains(e)
+	 * @pre !contains(e)
+	 * @post contains(e)
 	 * @param e elemento a añadir
 	 */
 	public void add(E e);
 	
 	/**
 	 * Elimina un elemento previamente contenido en el árbol
-	 * @Pre contains(e)
-	 * @Post !contians(e)
+	 * @pre contains(e)
+	 * @post !contians(e)
 	 * @param e elemento a eliminar
 	 */
 	public void remove(E e);

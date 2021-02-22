@@ -7,13 +7,13 @@ package uned.eped.t1;
  * Representa un árbol, que es una coleccióon cuyos elementos
  * se organizan jerárquicamente.
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene el árbol
  */
-public abstract interface TreeIF<E> extends CollectionIF<E> {
+public interface TreeIF<E> extends CollectionIF<E> {
 	
 	/**
 	 * Obtiene el elemento situado en la raíz del árbol
-	 * @Pre !isEmpty()
+	 * @pre !isEmpty()
 	 * @return el elemento que ocupa la raíz del árbol.
 	 */
 	public E getRoot();
@@ -32,9 +32,9 @@ public abstract interface TreeIF<E> extends CollectionIF<E> {
 	public int getNumChildren();
 	
 	/**
-	 * Devuelve el fan-out del árbol: el número máximo de
+	 * Devuelve el fanout del árbol: el número máximo de
 	 * hijos que tiene cualquier nodo del árbol
-	 * @return el fan-out
+	 * @return el fanout
 	 */
 	public int getFanOut();
 	

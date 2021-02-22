@@ -7,7 +7,7 @@ package uned.eped.t1;
  * Representa un contenedo, que es una colección de elementos 
  * que no guardan ningún tipo de orden entre sí
  *
- * @param <E>
+ * @param <E> tipo de objetos que contiene el contenedor
  */
 public interface ContainerIF<E> extends CollectionIF<E> {
 	
@@ -20,8 +20,8 @@ public interface ContainerIF<E> extends CollectionIF<E> {
 	/**
 	 * Elimina un elemento e del conetenedor
 	 * @param e el elemento
-	 * @pre: this.cointains(e)
-	 * @post: !this.cointains(e)
+	 * @pre this.cointains(e)
+	 * @post !this.cointains(e)
 	 */
 	public void remove(E e);
 

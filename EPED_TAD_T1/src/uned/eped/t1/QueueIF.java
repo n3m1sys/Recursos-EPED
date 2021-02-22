@@ -9,13 +9,13 @@ package uned.eped.t1;
  * de almacenamiento de sus elementos y una política de 
  * acceso First In First Out (FIFO)
  *
- * @param <E>
+ * @param <E> Tipo de objetos que contiene la cola
  */
 public interface QueueIF<E> {
 
 	/**
 	 * Devuelve el primer elemento de la cola.
-	 * @Pre !isEmpty()
+	 * @pre !isEmpty()
 	 * @return la cavbeza de la cola (su primer elemento)
 	 */
 	public E getFirst();
@@ -30,7 +30,7 @@ public interface QueueIF<E> {
 	/*
 	 * Elimina el primer elemento de la cola. Modifica el 
 	 * tramaño de la misma.
-	 * @Pre !isEmpty()
+	 * @pre !isEmpty()
 	 */
 	public void dequeue();
 	
