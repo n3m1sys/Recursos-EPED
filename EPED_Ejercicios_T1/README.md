@@ -1,0 +1,3 @@
+# EPED_Ejercicios_T1
+
+Estos ejercicios son mi implementación a los ejercicios propuestos para el tema 1. Como ha dicho el ED, no hay unica solución posible o correcta. Además no se garantiza que estas soluciones esten correctas al 100%. Si crees que hay algún error en estas respuestas puedes abrir una *Issue* en la pestaña de Issues del repositorio de github, indicando el ejercicio y tema al que pertenecen.
