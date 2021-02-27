@@ -5,3 +5,5 @@ Esta es la página del repositorio [n3m1dotsys/Recursos-EPED](https://github.com
 ## Javadoc de los diferentes proyectos
 
 - [EPED_TAD_T1](https://n3m1dotsys.github.io/Recursos-EPED/EPED_TAD_T1/)
+
+- [EPED_Ejercicios_T1](https://n3m1dotsys.github.io/Recursos-EPED/EPED_Ejercicios_T1/)
