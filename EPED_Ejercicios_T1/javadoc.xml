@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="private" additionalparam=" -tag pre:a:&quot;Precondiciones: &quot;&#10; -tag post:a:&quot;Postcondiciones: &quot;" author="true" classpath="/mnt/data/Uni/UNED_ETSII_Grado_En_Ingenieria_Informatica/2020-21/2oCuatri/Estrategias_De_Programación_Y_Estructuras_De_Datos/EPEDWorkspace/releases/EPED_TAD_T1.jar" destdir="../docs/EPED_Ejercicios_T1" doctitle="Estrategias de Programación y Estructuras de Datos: interfaces Tema 1" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="uned.eped.t1.ej1" source="11" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

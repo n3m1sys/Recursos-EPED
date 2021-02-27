@@ -13,7 +13,7 @@ public interface SequenceMS<E> extends SequenceIF<E>{
 	
 	/**
 	 * Establece la longitud de la secuencia
-	 * @pre s > 0
+	 * @pre s &gt; 0
 	 */
 	public void setSize(int s);
 	

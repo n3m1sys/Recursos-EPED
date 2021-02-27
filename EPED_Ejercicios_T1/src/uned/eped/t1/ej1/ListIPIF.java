@@ -15,13 +15,13 @@ public interface ListIPIF<E> extends SequenceIF<E>{
 	
 	/**
 	 * Obitiene el elemento en la posición del puntero
-	 * @return
+	 * @return valor de la posición del puntero
 	 */
 	public E get();
 	
 	/**
 	 * Establece el valor del elemento en la posición del puntero
-	 * @param elem
+	 * @param elem elemento a settear
 	 */
 	public void set(E elem);
 	
@@ -42,7 +42,7 @@ public interface ListIPIF<E> extends SequenceIF<E>{
 	
 	/**
 	 * Inserta un elemento en la lista
-	 * @param elem
+	 * @param elem elemento a insertar
 	 */
 	public void insert(E elem);
 	
