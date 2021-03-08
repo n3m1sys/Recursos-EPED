@@ -9,3 +9,5 @@ Este repositorio también recoge el código de las transparencias del equipo doc
 A lo largo de este curso me encargaré de ir subiendo nuevo material según lo vaya resolviendo.
 
 La página del proyecto: https://n3m1dotsys.github.io/Recursos-EPED/
+
+Para dudas teneis el apartado de *Issues* o podeis poneros en contacto conmigo en Telegram: @n3m1sys
