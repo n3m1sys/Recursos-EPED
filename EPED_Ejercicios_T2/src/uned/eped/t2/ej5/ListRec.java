@@ -9,7 +9,7 @@ import uned.eped.t1.ListIF;
  * 
  * @author n3m1dotsys
  *
- * @param <E>
+ * @param <E> tipo de elementos en la lista
  */
 public class ListRec<E> implements ListIF<E> {
 
@@ -35,7 +35,7 @@ public class ListRec<E> implements ListIF<E> {
 	
 	/**
 	 * Crea un nodo final para la lista
-	 * @param pNode
+	 * @param pNode nodo a crear
 	 */
 	public ListRec(E pNode) {
 		this(pNode, new ListRec<E>());
