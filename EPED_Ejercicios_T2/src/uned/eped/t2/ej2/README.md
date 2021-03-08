@@ -24,7 +24,7 @@ public static int fibonacciRecursive(int n) {
 	else if (n == 1 || n == 0) return 1;
 	else return -1;
 }
-`` 
+```
 
 - La parte no recursiva del algoritmo ocurre en los casos n=0 y n=1 donde el algoritmo simplemente devuelve 1.
 
