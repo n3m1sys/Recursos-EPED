@@ -13,37 +13,12 @@ import uned.eped.t1.SequenceIF;
  */
 public interface ListIPIF<E> extends SequenceIF<E>{
 	
-	/**
-	 * Obitiene el elemento en la posición del puntero
-	 * @return valor de la posición del puntero
-	 */
 	public E get();
 	
-	/**
-	 * Establece el valor del elemento en la posición del puntero
-	 * @param elem elemento a settear
-	 */
 	public void set(E elem);
 	
-	/**
-	 * Elimina el elemento de la lista en la posición del puntero
-	 */
 	public void remove();
 
-	/**
-	 * Aumenta el puntero de la lista al siguiente punto de interes
-	 */
-	public void next();
 	
-	/**
-	 * Decrementa el puntero de la lista al previo punto de interes
-	 */
-	public void prev();
-	
-	/**
-	 * Inserta un elemento en la lista
-	 * @param elem elemento a insertar
-	 */
-	public void insert(E elem);
 	
 }
