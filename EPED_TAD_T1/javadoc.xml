@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="javadoc">
     <target name="javadoc">
-        <javadoc access="private" additionalparam=" -tag pre:a:&quot;Precondiciones: &quot;&#10; -tag post:a:&quot;Postcondiciones: &quot;" author="true" classpath="." destdir="/mnt/data/Uni/UNED_ETSII_Grado_En_Ingenieria_Informatica/2020-21/2oCuatri/Estrategias_De_Programación_Y_Estructuras_De_Datos/EPEDWorkspace/site/docs/EPED_TAD_T1" doctitle="Estrategias de Programación y Estructuras de Datos: interfaces Tema 1" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="11" sourcefiles="src/uned/eped/t1/TreeIF.java" sourcepath="src" splitindex="true" use="true" version="true">
-            <link href="file:/mnt/data/Uni/UNED_ETSII_Grado_En_Ingenieria_Informatica/2020-21/2oCuatri/Estrategias_De_Programación_Y_Estructuras_De_Datos/EPEDWorkspace/site/docs/EPED_TAD_T1"/>
-        </javadoc>
+        <javadoc access="private" additionalparam=" -tag pre:&quot;Precondiciones: &quot;&#10;-tag post:&quot;Postcondiciones: &quot;" author="true" classpath="." destdir="../docs/EPED_TAD_T1" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="es.uned.lsi.eped.t1" source="11" sourcepath="src" splitindex="true" use="true" version="true"/>
     </target>
 </project>
