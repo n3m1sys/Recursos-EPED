@@ -1,0 +1,180 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{minted}
+\usepackage[a4paper, total={6.8in, 8in}]{geometry}
+\usetikzlibrary{positioning}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Martín Romera Sobrado}
+\chead{EPED}
+\lhead{Tema 3}
+\cfoot{\thepage}
+
+\setlength{\headheight}{52pt}
+
+\begin{document}
+
+    \title{\textbf{Ejercicios Propuestos Tema 3}}
+    \author{Martín ``n3m1dotsys'' Romera Sobrado}
+    \maketitle
+
+    \section{Ejercicio 1}
+
+        \textit{Calcular el coste del Algoritmo de Euclides}
+
+        \begin{minted}{java}
+    public int mcd (int A, int B) {
+        if (B == 0) return A;
+        else return mcd(B, A % B);
+    }
+        \end{minted}
+
+        En el mejor de los casos \texttt{B} será $0$ y la respuesta será 
+        inmediata, sin embargho si entra en el bucle de llamadas recursivas del 
+        \texttt{else} es más dificil analizar cuantas vueltas va a dar el 
+        algortimo ya que la operación módulo (\texttt{\%} en \textit{Java}) 
+        puede dar un resultado entre $0$ y \texttt{B}$-1$, según el valor de 
+        $A$ en ese momento. Podemos analizar el peor caso del algoritmo que 
+        según el \textit{teorea de Lamé} es tener como entrada dos número 
+        sucesivos de la \textit{secuencia de Fibonacci}. Prblemos como 
+        haría el algoritmo para la entrada \texttt{mcd(55,34)}:
+        
+        \begin{table}[ht!]
+            \centering
+            \begin{tabular}{|c|c|c|}
+                \hline
+                10 & \texttt{mcd(55,34)} & = \texttt{mcd(34,21)} \\\hline
+                9  & \texttt{mcd(34,21)} & = \texttt{mcd(21,13)} \\\hline
+                8  & \texttt{mcd(21,13)} & = \texttt{mcd(13,8 )} \\\hline
+                7  & \texttt{mcd(13,8 )} & = \texttt{mcd(8 ,5 )} \\\hline
+                6  & \texttt{mcd(8 ,5 )} & = \texttt{mcd(5 ,3 )} \\\hline
+                5  & \texttt{mcd(5 ,3 )} & = \texttt{mcd(3 ,2 )} \\\hline
+                4  & \texttt{mcd(3 ,2 )} & = \texttt{mcd(2 ,1 )} \\\hline
+                3  & \texttt{mcd(2 ,1 )} & = \texttt{mcd(1 ,1 )} \\\hline
+                2  & \texttt{mcd(1 ,1 )} & = \texttt{mcd(1 ,0 )} \\\hline
+                1  & \texttt{mcd(1 ,0 )} & = \textbf{1} \\\hline
+            \end{tabular}
+            \caption{Ejecución de \texttt{mcd(55,34)}}
+        \end{table}
+
+        Vemos que recorre todas las posibles entradas de números sucesivos de la 
+        \textit{secuencia de Fibonacci}, y que siendo este el peor caso teniendo 
+        en cuenta que incrementará una iteración cada vez que \texttt{A} (y 
+        \texttt{B}) lleguen al siguiente número de la secuencia, deducimos que 
+        el orden de ejecución será a la inversa de del orden de crecimiento de 
+        la \textit{secuencia de Fibonacci}, que se encuentra en un orden 
+        logarítmico $O(\log n)$.
+
+    \section{Ejercicio 2}
+
+        \textit{Calcular el coste del algoritmo ``multiplicación rusa''}
+
+        \begin{minted}{java}
+    public int multRusa(int A, int B:) {
+        if (A == 1) return B;
+        if (A % 2 != 0) return B + multRusa(A/2, B*2);
+        else return multRusa(A/2, B*2);
+    }
+        \end{minted}
+
+        Este método consiste en realizar la suma de los valores de \texttt{B} 
+        multiplicados por las potencias de $2$ que componen a \texttt{A}. Por 
+        ejemplo, si tenemos que \texttt{A} es $42$ y \texttt{B} es $50$. La 
+        descomposición en base $2$ de $42$ sería
+        \[
+            42 = 2^1 + 2^3 + 2^5 = 2 + 8 + 32  
+        \]
+        , de forma que con el método de multiplicación rusa sería:
+        \[
+            42 * 50 = 2^1 \cdot 50 + 2^3 \cdot 50 + 2^5 \cdot 50  
+                    = 2 \cdot 50 + 8 \cdot 50 + 32 \cdot 50 = 2100          
+        \]
+        Cada producto representa una iteración en la que que se cumplía alguno 
+        de los dos \texttt{if}-s. De todas formas también se itera cuando no se 
+        realizan sumas. Una representación más afín del algoritmo podría ser la 
+        siguiente tabla: 
+        
+        \begin{table}[ht!]
+            \centering
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                $2^0$ & \texttt{multRusa(42,50)}  = &       & \texttt{multRusa(21,100)} \\\hline
+                $2^1$ & \texttt{multRusa(21,100)} = & 100 + & \texttt{multRusa(10,200)} \\\hline
+                $2^2$ & \texttt{multRusa(10,200)} = &       & \texttt{multRusa(5 ,400)} \\\hline
+                $2^3$ & \texttt{multRusa(5 ,400)} = & 400 + & \texttt{multRusa(2 ,800)} \\\hline
+                $2^4$ & \texttt{multRusa(2 ,800)} = &       & \texttt{multRusa(1,1600)} \\\hline
+                $2^5$ & \texttt{multRusa(1,1600)} = & 1600  & \textbf{end}\\\hline 
+            \end{tabular}
+            \caption{Ejecución de \texttt{multRusa(42,50)}}
+        \end{table}
+
+        Tiene que hacer tantas iteraciones como bits se necesitan para codificar 
+        \texttt{A} en base 2, es decir:
+        \[
+            T(n) = \log_2(n) \in O(\log n)  
+        \]
+
+    \section{Ejercicio 3}
+
+        \textit{Calcular el coste del algoritmo ``potencia'':}
+
+        \begin{minted}{java}
+    public int potencia(int B, int N) {
+        if (N == 0) return 1;
+        else return B * potencia(B, N-1);
+    }
+        \end{minted}
+
+        Cada recursión \texttt{N} se decrementa en 1 hasta llegar a 0, de forma 
+        que es sencillo ver que para \texttt{N}$=n$ el tiempo de ejeción es:
+        \[
+            T(n) = n + 1 \in O(n)  
+        \]
+
+    \section{Ejercicio 4}
+
+        \textit{Calcular el coste del algoritmo ``potencia optimizada'':}
+
+        \begin{minted}{java}
+    public int potencia2(int B, int N) {
+        if (N == 0) return 1;
+        int rec = potencia2(B,N/2);
+        if (N%2 == 0) return rec*rec;
+        else return B * rec * rec;
+    }
+        \end{minted}
+
+        Este algoritmo en vez de reducir en 1 el valor de \texttt{N} se va 
+        reduciendo por la mitad, de forma que el tiempo de ejecución para un 
+        parametro \texttt{N} con valor $n$ será:
+        \[
+            T(n) = \log_2(n) + 1 \in O(\log n)
+        \]
+
+    \section{Ejercicio 5}
+
+        \textit{Calcular el coste de invertir un número:}
+
+        \begin{minted}{java}
+    public int invertir(int n) return invertirAux(0,n);
+    public int invertirAux(int ac, n) {
+        if (n == 0) return ac;
+        return invertirAux(ac * 10 + (n % 10), n/10);
+    }
+        \end{minted}
+
+        De forma similar algunos de los algoritmos que hemos analizado hasta 
+        ahora, parametro que controla el número de recursiones que hay que 
+        realizar es \texttt{n} el que se divide entre 10 cada llamada 
+        recursiva, de forma que el tiempo de ejecución es:
+        \[
+            T(n) = \log_{10} (n) + 1 \in O (\log n)
+        \]
+\end{document}

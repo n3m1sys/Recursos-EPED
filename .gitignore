@@ -35,3 +35,12 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+
+# LaTeX
+
+*/_minted*/*
+*.aux
+*.fdb_latexmk
+*.fls 
+*.log 
+*.synctex*
